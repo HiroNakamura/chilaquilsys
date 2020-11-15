@@ -27,7 +27,8 @@ public class ChilaquilRestController{
 
      //http://localhost:8090/chilaquilsys/libros
      @GetMapping("/libros")
-     @CrossOrigin(origins = "http://localhost:4200")
+     //@CrossOrigin(origins = "http://localhost:4200")
+     @CrossOrigin("*")
      public List<Libro> getLibros() {
          return libroRestService.getAllLibros();
      }
